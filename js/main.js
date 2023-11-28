@@ -45,6 +45,13 @@ const vueConfig = {
         this.newTask = "";
       }
     },
+    isDone(index) {
+      if (this.tasks[index].done === false) {
+        this.tasks[index].done = true;
+      } else if (this.tasks[index].done === true) {
+        this.tasks[index].done = false;
+      }
+    },
   },
 };
 
