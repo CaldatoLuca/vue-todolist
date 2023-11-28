@@ -29,26 +29,35 @@
             <h1 class="text-center text-white mb-4">{{ mainTitle }}</h1>
 
             <!-- inserimento di un nuovo task -->
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Add new task here..."
-                aria-label="Add new task here..."
-                aria-describedby="button-addon2"
-                id="new-task"
-              />
-              <button class="btn btn-info" type="button" id="button-addon2">
-                Add Task
-              </button>
+            <div class="mb-3">
+              <label for="new-task" class="form-label text-white"
+                >New Task</label
+              >
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add your new task here..."
+                  aria-describedby="button-addon1"
+                  id="new-task"
+                />
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  id="button-addon1"
+                >
+                  Add
+                </button>
+              </div>
             </div>
 
+            <!--?  è uguale a linea 60 ma ho else  :class="task.done === true ? 'text-decoration-line-through ' : '' " -->
             <!-- lista dei task -->
             <ul class="list-group">
               <li
                 v-for="(task, index) in tasks"
                 class="list-group-item d-flex justify-content-between align-items-center"
-                :class="task.done === true ? 'text-decoration-line-through ' : '' "
+                :class="{'text-decoration-line-through' : task.done === true}"
               >
                 {{ task.text }}
                 <button
