@@ -40,11 +40,13 @@
                   placeholder="Add your new task here..."
                   aria-describedby="button-addon1"
                   id="new-task"
+                  v-model="newTask"
                 />
                 <button
                   class="btn btn-primary"
                   type="button"
                   id="button-addon1"
+                  @click="addTask"
                 >
                   Add
                 </button>
