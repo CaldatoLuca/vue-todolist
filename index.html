@@ -52,7 +52,6 @@
               </div>
             </div>
 
-            <!--?  è uguale a linea 60 ma ho else  :class="task.done === true ? 'text-decoration-line-through ' : '' " -->
             <!-- lista dei task -->
             <ul class="list-group" v-if="tasks.length > 0">
               <li
@@ -71,6 +70,7 @@
               </li>
             </ul>
 
+            <!-- messaggio di nessun task presente -->
             <div class="alert alert-danger" role="alert" v-else>
               There are no tasks in your list, try creating a new one.
             </div>
