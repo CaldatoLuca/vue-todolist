@@ -34,7 +34,7 @@ const vueConfig = {
   },
   methods: {
     removeTask(index) {
-      console.log(index);
+      this.tasks.splice(index, 1);
     },
   },
 };
