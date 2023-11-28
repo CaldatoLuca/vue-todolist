@@ -24,13 +24,11 @@
           class="row bg-dark justify-content-center align-items-center h-100"
         >
           <div class="col col-md-6">
-            <h1 class="text-center text-white mb-4">ToDoList</h1>
+            <h1 class="text-center text-white mb-4">{{ mainTitle }}</h1>
             <ul class="list-group">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-              <li class="list-group-item">A fourth item</li>
-              <li class="list-group-item">And a fifth one</li>
+              <li v-for="task in tasks" class="list-group-item">
+                {{ task.text }}
+              </li>
             </ul>
           </div>
         </div>
