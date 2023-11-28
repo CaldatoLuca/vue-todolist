@@ -24,7 +24,7 @@ const vueConfig = {
       },
       {
         text: "Studiare Vue Js",
-        done: true,
+        done: false,
       },
     ];
     return {
