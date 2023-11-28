@@ -38,7 +38,12 @@ const vueConfig = {
       this.tasks.splice(index, 1);
     },
     addTask() {
-      this.tasks.push({ text: this.newTask, done: false });
+      if (this.newTask.trim() === "") {
+        return (this.newTask = "");
+      } else {
+        this.tasks.push({ text: this.newTask, done: false });
+        this.newTask = "";
+      }
     },
   },
 };
