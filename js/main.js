@@ -32,6 +32,11 @@ const vueConfig = {
       tasks,
     };
   },
+  methods: {
+    removeTask(index) {
+      console.log(index);
+    },
+  },
 };
 
 const myApp = createApp(vueConfig);

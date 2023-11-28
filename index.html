@@ -27,7 +27,7 @@
             <h1 class="text-center text-white mb-4">{{ mainTitle }}</h1>
             <ul class="list-group">
               <li
-                v-for="task in tasks"
+                v-for="(task, index) in tasks"
                 class="list-group-item d-flex justify-content-between align-items-center"
                 :class="task.done === true ? 'text-decoration-line-through ' : '' "
               >
@@ -36,6 +36,7 @@
                   type="button"
                   class="btn-close"
                   aria-label="Close"
+                  @click="removeTask(index)"
                 ></button>
               </li>
             </ul>
