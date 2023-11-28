@@ -41,6 +41,7 @@
                   aria-describedby="button-addon1"
                   id="new-task"
                   v-model="newTask"
+                  @keyup.enter="addTask"
                 />
                 <button
                   class="btn btn-primary"
