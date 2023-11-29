@@ -1,6 +1,7 @@
 # ToDoList
 
-![thumbnail](/readme-img/thumnail.jpeg)
+https://github.com/CaldatoLuca/vue-todolist/assets/144032332/eb0de255-5ceb-49ee-a1c3-f3a31b4b2a3c
+
 
 Rifare l'esercizio della to do list.
 Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
