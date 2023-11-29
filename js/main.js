@@ -36,29 +36,23 @@ const vueConfig = {
   methods: {
     removeTask(index) {
       this.tasks.splice(index, 1);
-      if (this.tasks[index].done === false) {
-        this.tasks[index].done = true;
-      } else if (this.tasks[index].done === true) {
-        this.tasks[index].done = false;
-      }
     },
     addTask() {
       if (this.newTask.trim() === "") {
-        return (this.newTask = "");
+        return;
       } else {
         this.tasks.push({ text: this.newTask, done: false });
         this.newTask = "";
       }
     },
     isDone(index) {
-      if (this.tasks[index].done === false) {
-        this.tasks[index].done = true;
-      } else if (this.tasks[index].done === true) {
-        this.tasks[index].done = false;
-      }
+      this.tasks[index].done = !this.tasks[index].done;
     },
   },
 };
 
 const myApp = createApp(vueConfig);
 myApp.mount("#app");
+
+//! condizione diversa in isDone (è più corta) - usata come toggle
+//! sarebbe meglio gestire l' assegnazione della classe 'text-decoration-line-through' con un metodo che fa il controllo (la logica fuori dall' html)

@@ -60,12 +60,13 @@
                 :class="{'text-decoration-line-through' : task.done === true}"
                 @click="isDone(index)"
               >
-                {{ task.text }}
+                <div role="button">{{ task.text }}</div>
+
                 <button
                   type="button"
                   class="btn-close"
                   aria-label="Close"
-                  @click="removeTask(index)"
+                  @click.stop="removeTask(index)"
                 ></button>
               </li>
             </ul>
@@ -95,3 +96,9 @@
     <!-- !my js/ -->
   </body>
 </html>
+
+<!-- !per risolvere il problema dell' evento sul li vado a creare un div che contiene il testo e metto su di lui @isDone, il bottone non interferisce -->
+<!-- <div role="button" @click="isDone(index)">{{ task.text }}</div> -->
+
+<!-- !MEGLIO usa stopPropagation cosi che non si espanda sui figli -->
+<!-- .stop sul click della x -->
