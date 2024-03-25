@@ -1,6 +1,4 @@
-# README
-
-## To Do List
+# To Do List
 
 ### Descrizione
 Questo progetto implementa una semplice lista delle cose da fare utilizzando HTML, CSS, JavaScript, Bootstrap e Vue.js.
